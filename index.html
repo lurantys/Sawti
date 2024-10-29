@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sawti by Aymen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <a href="#">
+                <img src="{{ url_for('static', filename='logosawti.png') }}" alt="Sawti Logo" class="logo">
+            </a>
+
+            <div class="select-menu">
+              <div class="select-btn">
+                <span class="sBtn-text">Select Source Language</span>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+            
+              <ul class="options" id="sourceLangOptions">
+                {% for lang in languages %}
+                <li class="option" data-value="{{ lang }}">
+                  <span class="option-text">{{ lang }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <div class="select-menu">
+              <div class="select-btn">
+                <span class="sBtn-text">Select Target Language</span>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+            
+              <ul class="options" id="targetLangOptions">
+                {% for lang in languages %}
+                <li class="option" data-value="{{ lang }}">
+                  <span class="option-text">{{ lang }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            
+            <div class="button-container">
+            <button id="reverseBtn" class="button"> Reverse Languages <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <button id="startBtn" class="button"> Start Recording<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            
+            <div id="voice-detection"></div> 
+            <button id="stopBtn" disabled class="button"> Stop Recording <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            
+        </div>
+<ul class="wave-menu">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <p class = "signature">By Rum</p>
+</body>
+</html>

@@ -14,8 +14,8 @@ CORS(app)
 translator = Translator()
 recognizer = sr.Recognizer()
 
-# Path to ffmpeg - update this to match your installation location
-FFMPEG_PATH = 'C:\\ffmpeg\\bin\\ffmpeg.exe'  # Make sure to replace this with your actual ffmpeg path
+# Path to ffmpeg
+FFMPEG_PATH = 'C:\\ffmpeg\\bin\\ffmpeg.exe'
 
 # Extended list of languages
 LANGUAGES = {
