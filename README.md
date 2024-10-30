@@ -84,3 +84,6 @@ bash
 Usage
 
 Once the bot is running, you can invite it to your Discord server and use the commands listed above. Type / in any text channel to see the list of available commands.
+
+
+PS : infinity.py is the source code for the discord bot.
